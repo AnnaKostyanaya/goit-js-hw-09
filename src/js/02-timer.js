@@ -32,10 +32,11 @@ const refs = {
     days:document.querySelector(`span[data-days]`),
     hours:document.querySelector(`span[data-hours]`),
     minutes:document.querySelector(`span[data-minutes]`),
-    seconds:document.querySelector(`span[data-seconds]`),
+    seconds: document.querySelector(`span[data-seconds]`),
+    calendar: document.querySelector(`#datetime-picker`),
 };
 
-flatpickr("input#datetime-picker", options);
+flatpickr(refs.calendar, options);
 refs.startBtn.disabled = true;
 refs.startBtn.addEventListener("click", () => {
     timer.start();
