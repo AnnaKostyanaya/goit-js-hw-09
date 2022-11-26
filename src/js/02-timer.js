@@ -10,9 +10,9 @@ let chooseDate = 0;
 
 const refs = {
     startBtn: document.querySelector(`button[data-start]`),
-    days:document.querySelector(`span[data-days]`),
-    hours:document.querySelector(`span[data-hours]`),
-    minutes:document.querySelector(`span[data-minutes]`),
+    days: document.querySelector(`span[data-days]`),
+    hours: document.querySelector(`span[data-hours]`),
+    minutes: document.querySelector(`span[data-minutes]`),
     seconds: document.querySelector(`span[data-seconds]`),
     calendar: document.querySelector(`#datetime-picker`),
 };
