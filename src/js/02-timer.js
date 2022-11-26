@@ -45,6 +45,8 @@ const timer = {
             return;
         }
         this.isActive = true;
+        refs.calendar.disabled = true;
+        refs.startBtn.disabled = true;
         this.intervalId = setInterval(() => {
             const nowDate = Date.now();
             const delta = chooseDate - nowDate;
