@@ -1,0 +1,27 @@
+body {
+    text-align: center;
+}
+
+p {
+    text-align: left;
+}
+
+button {
+    width: 80px;
+    height: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    border: aqua;
+}
+
+button[data-start] {
+    position: absolute;
+    top: 50%;
+    right: 50%
+}
+
+button[data-stop] {
+    position: absolute;
+    top: 50%;
+    right: 40%;
+}

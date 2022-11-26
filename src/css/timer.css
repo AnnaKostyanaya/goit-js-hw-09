@@ -1,0 +1,54 @@
+.timer {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.field {
+    margin: 40px;
+    font-size: large;
+}
+
+.value[data-days] {
+    font-size: 120px;
+}
+
+.value[data-hours] {
+    font-size: 100px;
+}
+
+.value[data-minutes] {
+    font-size: 80px;
+}
+
+.value[data-seconds] {
+    font-size: 60px;
+}
+
+input {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 200px;
+    height: 100px;
+
+    text-align: center;
+}
+
+button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+
+    width: 100px;
+    height: 50px;
+
+    background-color: #212121;
+    color: #fafafa;
+}
+
+button[disabled] {
+    background-color: rgb(167, 161, 161);
+}
