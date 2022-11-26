@@ -4,10 +4,6 @@ import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
 import Notiflix from 'notiflix';
 
-const notify = require("notiflix/build/notiflix-notify-aio");
-const flatpickr = require("flatpickr");
-let chooseDate = 0;
-
 const refs = {
     startBtn: document.querySelector(`button[data-start]`),
     days: document.querySelector(`span[data-days]`),
@@ -16,8 +12,9 @@ const refs = {
     seconds: document.querySelector(`span[data-seconds]`),
     calendar: document.querySelector(`#datetime-picker`),
 };
+let chooseDate = 0;
 
-const options = {
+flatpickr(refs.calendar, {
     enableTime: true,
     time_24hr: true,
     defaultDate: new Date(),
@@ -30,13 +27,11 @@ const options = {
         if (deltaTime >= 0) {
             // alert("Please choose a date in the future");
             Notiflix.Notify.info('Please choose a date in the future');
-        } else { 
+        } else {
             refs.startBtn.disabled = false;
         }
     },
-};
-
-flatpickr(refs.calendar, options);
+});
 refs.startBtn.disabled = true;
 refs.startBtn.addEventListener("click", () => {
     timer.start();
@@ -57,10 +52,6 @@ const timer = {
             updateClockface(days, hours, minutes, seconds);
         }, 1000);
     },
-    // stop() { 
-    //     clearInterval(this.intervalId);
-    //     this.isActive = false;
-    // }
 };
 
 function convertMs(ms) { 
