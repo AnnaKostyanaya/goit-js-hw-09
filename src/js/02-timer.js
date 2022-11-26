@@ -4,8 +4,8 @@ import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
 import Notiflix from 'notiflix';
 
-const notify = require("notiflix/build/notiflix-notify-aio");
-const flatpickr = require("flatpickr");
+// const notify = require("notiflix/build/notiflix-notify-aio");
+// const flatpickr = require("flatpickr");
 let chooseDate = 0;
 
 const options = {
@@ -36,7 +36,7 @@ const refs = {
     calendar: document.querySelector(`#datetime-picker`),
 };
 
-flatpickr(refs.calendar, options);
+// flatpickr(refs.calendar, options);
 refs.startBtn.disabled = true;
 refs.startBtn.addEventListener("click", () => {
     timer.start();
