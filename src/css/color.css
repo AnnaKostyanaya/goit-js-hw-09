@@ -17,11 +17,12 @@ button {
 button[data-start] {
     position: absolute;
     top: 50%;
-    right: 50%
+    right: 55%
 }
 
 button[data-stop] {
     position: absolute;
     top: 50%;
     right: 40%;
+    margin-left: 10px;
 }
