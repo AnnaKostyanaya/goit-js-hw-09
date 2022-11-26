@@ -4,9 +4,18 @@ import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
 import Notiflix from 'notiflix';
 
-// const notify = require("notiflix/build/notiflix-notify-aio");
-// const flatpickr = require("flatpickr");
+const notify = require("notiflix/build/notiflix-notify-aio");
+const flatpickr = require("flatpickr");
 let chooseDate = 0;
+
+const refs = {
+    startBtn: document.querySelector(`button[data-start]`),
+    days:document.querySelector(`span[data-days]`),
+    hours:document.querySelector(`span[data-hours]`),
+    minutes:document.querySelector(`span[data-minutes]`),
+    seconds: document.querySelector(`span[data-seconds]`),
+    calendar: document.querySelector(`#datetime-picker`),
+};
 
 const options = {
     enableTime: true,
@@ -27,16 +36,7 @@ const options = {
     },
 };
 
-const refs = {
-    startBtn: document.querySelector(`button[data-start]`),
-    days:document.querySelector(`span[data-days]`),
-    hours:document.querySelector(`span[data-hours]`),
-    minutes:document.querySelector(`span[data-minutes]`),
-    seconds: document.querySelector(`span[data-seconds]`),
-    calendar: document.querySelector(`#datetime-picker`),
-};
-
-// flatpickr(refs.calendar, options);
+flatpickr(refs.calendar, options);
 refs.startBtn.disabled = true;
 refs.startBtn.addEventListener("click", () => {
     timer.start();
