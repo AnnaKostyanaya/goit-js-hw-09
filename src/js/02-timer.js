@@ -51,8 +51,17 @@ const timer = {
             const nowDate = Date.now();
             const delta = chooseDate - nowDate;
             const { days, hours, minutes, seconds } = convertMs(delta);
-            updateClockface(days, hours, minutes, seconds);
+            if (delta <= 0) { 
+                timer.stop();
+                } updateClockface(days, hours, minutes, seconds);
         }, 1000);
+    },
+    stop() {
+        this.isActive = false;
+        refs.calendar.disabled = false;
+        refs.startBtn.disabled = false;
+        clearInterval(this.intervalId);
+        const time = this.convertMs(0);
     },
 };
 
