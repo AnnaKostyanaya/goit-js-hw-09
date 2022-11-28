@@ -2,27 +2,86 @@
     display: flex;
     align-items: baseline;
     justify-content: center;
+    max-width: 100vw;
+    outline: solid 1px red;
 }
 
-.field {
-    margin: 40px;
-    font-size: large;
+@media screen and (max-width: 479px) {
+    .timer {
+        width: 480px;
+    } 
+    .field {
+        margin: 10px;
+        font-size: small;
+    }
+
+    .value[data-days] {
+        font-size: 60px;
+    }
+
+    .value[data-hours] {
+        font-size: 40px;
+    }
+
+    .value[data-minutes] {
+        font-size: 30px;
+    }
+
+    .value[data-seconds] {
+        font-size: 20px;
+    }
 }
 
-.value[data-days] {
-    font-size: 120px;
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .timer {
+        width: 768px;
+    }
+    .field {
+        margin: 20px;
+        font-size: medium;
+    }
+
+    .value[data-days] {
+        font-size: 60px;
+    }
+
+    .value[data-hours] {
+        font-size: 50px;
+    }
+
+    .value[data-minutes] {
+        font-size: 40px;
+    }
+
+    .value[data-seconds] {
+        font-size: 30px;
+    }
 }
 
-.value[data-hours] {
-    font-size: 100px;
-}
+@media screen and (min-width: 768px) {
+    .timer {
+        width: 1200px;
+    }
+    .field {
+        margin: 40px;
+        font-size: large;
+    }
 
-.value[data-minutes] {
-    font-size: 80px;
-}
+    .value[data-days] {
+        font-size: 120px;
+    }
 
-.value[data-seconds] {
-    font-size: 60px;
+    .value[data-hours] {
+        font-size: 100px;
+    }
+
+    .value[data-minutes] {
+        font-size: 80px;
+    }
+
+    .value[data-seconds] {
+        font-size: 60px;
+    }
 }
 
 input {
